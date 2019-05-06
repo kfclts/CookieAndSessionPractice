@@ -14,12 +14,14 @@
     "nodemon": "^1.18.11"
   },
   "dependencies": {
+    "@types/express-session": "^1.15.12",
     "@types/mongoose": "^5.3.27",
     "@types/sequelize": "^4.27.48",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
     "mongodb": "^3.2.3",
     "mongoose": "^5.5.5",
     "mysql2": "^1.6.5",

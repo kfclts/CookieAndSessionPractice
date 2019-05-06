@@ -15,7 +15,8 @@
     "typeAcquisition": {
         "include": [
             "sequelize",
-            "mongoose"
+            "mongoose",
+            "express-session"
         ]
     }
 }
