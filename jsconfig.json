@@ -16,7 +16,8 @@
         "include": [
             "sequelize",
             "mongoose",
-            "express-session"
+            "express-session",
+            "connect-mongodb-session"
         ]
     }
 }
