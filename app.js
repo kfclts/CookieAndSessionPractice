@@ -11,7 +11,8 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI = 'mongodb+srv://USER:PASSWORD@cluster0-gzkx8.gcp.mongodb.net/shop?retryWrites=true';
+const MONGODB_URI =
+  'mongodb+srv://USER:PASSWORD@cluster0-gzkx8.gcp.mongodb.net/shop?retryWrites=true';
 
 const app = express();
 const store = new MongoDBStore({
@@ -36,15 +37,6 @@ app.use(
     store: store
   })
 );
-
-app.use((req, res, next) => {
-  User.findById('5cce91db8331f9a18235c8d3')
-    .then(user => {
-      req.user = user;
-      next();
-    })
-    .catch(err => console.log(err));
-});
 
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
