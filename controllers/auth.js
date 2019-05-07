@@ -21,7 +21,10 @@ exports.postLogin = (req, res, next) => {
       req.session.isLoggedIn = true;
       req.session.user = user;
     //res.setHeader('Set-Cookie', 'loggedIn=true;Max-Age=10');
-      res.redirect('/');
+      req.session.save(err => {
+        console.log(err);
+        res.redirect('/');
+      });
     })
     .catch(err => console.log(err));
 };
